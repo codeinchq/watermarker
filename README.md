@@ -42,12 +42,12 @@ docker run -p "3000:3000" codeinchq/watermarker
 
 A simple scenario to apply a watermark to an image using `curl`:
 ```bash
-curl -X POST -F "image=@/path/po/image.png" -F "watermark=@/path/to/watermark.png" http://localhost:3000/apply -o watermarked.png
+curl -X POST http://localhost:3000/apply -F "image=@/path/to/image.png" -F "watermark=@/path/to/watermark.png" -o watermarked.png
 ```
 
 A more complex scenario with additional parameters:
 ```bash
-curl -X POST -F "image=@/path/po/image.png" -F "watermark=@/path/to/watermark.png" http://localhost:3000/apply -F "blur=3" -F "ratio=1" -F "format=jpg" -F "quality=100" -o test-watermarked.jpg
+curl -X POST http://localhost:3000/apply -F "image=@/path/to/image.png" -F "watermark=@/path/to/watermark.png" -F "blur=3" -F "ratio=1" -F "format=jpg" -F "quality=100" -o test-watermarked.jpg
 ```
 
 ## Client
