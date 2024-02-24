@@ -18,7 +18,7 @@ contain two files:
 * `watermark`: The watermark to apply to the image.
 
 Additional parameters can be sent to customize the conversion process:
-* `ratio`: The ratio of the watermark to the image. The value must be a float between 0 and 1. The default value is 0.5.
+* `size`: The size of the watermark in relation to the image in percentage. The value must be an integer. The default value is 75.
 * `position`: The position of the watermark. The value must be one of `center`, `top-left`, `top`, `top-right`, `left`, `right`, `bottom-left`, `bottom`, `bottom-right`. The default value is `center`.
 * `padding`: The padding between the watermark and the edge of the image. The value must be an integer. The default value is 10. This is ignored if the position is `center`.
 * `format`: The format of the output image. The value must be one of `jpg`, `png`, `gif`. The default value is `png`.
@@ -47,7 +47,7 @@ curl -X POST http://localhost:3000/apply -F "image=@/path/to/image.png" -F "wate
 
 A more complex scenario with additional parameters:
 ```bash
-curl -X POST http://localhost:3000/apply -F "image=@/path/to/image.png" -F "watermark=@/path/to/watermark.png" -F "blur=3" -F "ratio=1" -F "format=jpg" -F "quality=100" -o test-watermarked.jpg
+curl -X POST http://localhost:3000/apply -F "image=@/path/to/image.png" -F "watermark=@/path/to/watermark.png" -F "blur=3" -F "size=100" -F "format=jpg" -F "quality=100" -o test-watermarked.jpg
 ```
 
 ## Client

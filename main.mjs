@@ -40,7 +40,7 @@ app.post('/apply', cpUpload, async (req, res) => {
         const watermarkImage = await Jimp.read(watermarkFile.path);
 
         // calculating the dimensions of the watermark
-        const ratio = parseFloat(req.body.ratio ?? .75);
+        const ratio = (req.body.size ?? 75) / 100;
         let newHeight, newWidth;
         if ((mainImage.getHeight() / mainImage.getWidth()) < (watermarkImage.getHeight() / watermarkImage.getWidth())) {
             newHeight = ratio * mainImage.getHeight();
