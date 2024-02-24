@@ -1,7 +1,7 @@
 ####################################################################################################
 # WATERMARKER
 ####################################################################################################
-FROM --platform=$TARGETPLATFORM node:21-alpine AS watermarker
+FROM --platform=$TARGETPLATFORM node:lts-slim AS watermarker
 
 ENV PORT=3000
 ENV NODE_ENV=production
