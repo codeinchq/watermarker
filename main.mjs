@@ -24,6 +24,19 @@ const cpUpload = upload.fields([
     {name: 'watermark', maxCount: 1},
 ]);
 
+/**
+ * Health check endpoint
+ */
+app.get('/health', (req, res) => {
+    res.json({
+        status: "up",
+        timestamp: new Date().toISOString()
+    });
+});
+
+/**
+ * Apply watermark to an image
+ */
 app.post('/apply', cpUpload, async (req, res) => {
     const imageFile = req.files['image'][0];
     const watermarkFile = req.files['watermark'][0];
