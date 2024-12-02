@@ -8,8 +8,8 @@
 
 import express from 'express';
 import multer from 'multer';
-import * as path from "path";
-import * as fs from "fs";
+import * as path from 'path';
+import * as fs from 'fs';
 import uniqid from 'uniqid';
 import Jimp from 'jimp';
 
@@ -17,8 +17,8 @@ const port = +(process.env.PORT ?? 3000);
 const tempDir = 'temp';
 
 const app = express();
-const upload = multer({dest: tempDir});
 
+const upload = multer({dest: tempDir});
 const cpUpload = upload.fields([
     {name: 'image', maxCount: 1},
     {name: 'watermark', maxCount: 1},
