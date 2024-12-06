@@ -50,6 +50,13 @@ A more complex scenario with additional parameters:
 curl -X POST http://localhost:3000/apply -F "image=@/path/to/image.png" -F "watermark=@/path/to/watermark.png" -F "blur=3" -F "size=100" -F "format=jpg" -F "quality=100" -o test-watermarked.jpg
 ```
 
+### Health check
+
+A health check is available at the `/health` endpoint. The server returns a status code of `200` if the service is healthy, along with a JSON object:
+```json
+{ "status": "up" }
+```
+
 ## Client
 
 A PHP 8 client is available at on [GitHub](https://github.com/codeinchq/watermarker-php-client)
