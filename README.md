@@ -1,6 +1,8 @@
 # watermarker
 
+[![Code Inc.](https://img.shields.io/badge/Code%20Inc.-Document%20Cloud-blue)](https://www.codeinc.co)
 [![Docker Image CI](https://github.com/codeinchq/watermarker/actions/workflows/docker-image.yml/badge.svg)](https://github.com/codeinchq/watermarker/actions/workflows/docker-image.yml)
+[![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/codeinchq/watermarker?label=Version&color=red)](https://github.com/codeinchq/watermarker/releases/latest)
 
 This repository contains a simple containerized REST API to apply a watermark to an image. The server is written in Javascript and uses the [Jimp](https://www.npmjs.com/package/jimp) library to process the images.
 
@@ -59,8 +61,7 @@ A health check is available at the `/health` endpoint. The server returns a stat
 
 ## Client
 
-A PHP 8 client is available at on [GitHub](https://github.com/codeinchq/watermarker-php-client)
-and [Packagist](https://packagist.org/packages/codeinc/watermarker-client).
+A PHP 8 client is available at on [GitHub](https://github.com/codeinchq/document-cloud-php-client) and [Packagist](https://packagist.org/packages/codeinc/document-cloud-client).
 
 ## License
 
